@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №14 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="images/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    let arr = [];
+    for (let i = 0; i < 20; i++) {
+      arr.push(Math.floor(Math.random() * 100));
+    }
+
+    document.write("Початковий масив: <br>" + arr.join("  "));
+
+    let A = 5;
+    let B = 15;
+
+    let range = arr.filter(val => val >= A && val < B);
+    let avg = range.reduce((sum, val) => sum + val, 0) / range.length;
+
+    console.log("Середнє арифметичне чисел у проміжку [" + A + "," + B + "): " + avg.toFixed(2));
+
+    let count = arr.filter((val, index) => index % 4 === 0 && val > 0).length;
+
+    console.log("Кількість додатних чисел на місцях, кратних 4: " + count);
+  </script>
+</body>
+
+</html>

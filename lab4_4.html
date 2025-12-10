@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №14 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="images/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+    let citrus = ['orange', 'lemon', 'lime'];
+
+    document.write("Масив фруктів: <br>" + fruits.join("  "));
+    document.write("<br>Масив цитрусових: <br>" + citrus.join("  "));
+    
+    fruits = fruits.concat(citrus);
+    document.write("<br>Об'єднаний масив фруктів: <br>" + fruits.join("  "));
+
+    fruits.splice(fruits.indexOf('mango') + 1, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+    document.write("<br>Масив після додавання нових фруктів після mango: <br>" + fruits.join("  "));
+
+    fruits.pop();
+    fruits.pop();
+    fruits.pop();
+
+    document.write("<br>Масив після видалення останніх трьох фруктів: <br>" + fruits.join("  "));
+
+    fruits.sort();
+    document.write("<br>Відсортований масив фруктів: <br>" + fruits.join("  "));
+
+    fruits.reverse();
+    document.write("<br>Масив фруктів у зворотному порядку: <br>" + fruits.join("  "));
+
+    fruits.sort((a, b) => a.length - b.length);
+    document.write("<br>Масив фруктів, відсортований за довжиною назви: <br>" + fruits.join("  "));
+  </script>
+</body>
+
+</html>

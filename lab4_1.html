@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №14 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="images/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    document.write("Трикутні числа від 1 до 10: <br>");
+    let Treag = [];
+    for (let n = 1; n <= 10; n++) {
+      Treag.push(n * (n + 1) / 2);
+    }
+    document.write(Treag.join("  "));
+
+    document.write("<br>Квадратні числа від 1 до 10:");
+    let kvad = [];
+    for (let n = 1; n <= 10; n++) {
+      kvad.push(n * n);
+    }
+    document.write("<br>" + kvad.join("  "));
+
+    document.write("<br>Об'єднаний масив:");
+    let rez = Treag.concat(kvad);
+    document.write("<br>" + rez.join("  "));
+
+    document.write("<br>Відсортований об'єднаний масив у зворотному порядку:");
+    rez.reverse();
+    document.write("<br>" + rez.join("  "));
+  </script>
+</body>
+
+</html>
