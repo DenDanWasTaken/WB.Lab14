@@ -33,11 +33,11 @@
     let range = arr.filter(val => val >= A && val < B);
     let avg = range.reduce((sum, val) => sum + val, 0) / range.length;
 
-    console.log("Середнє арифметичне чисел у проміжку [" + A + "," + B + "): " + avg.toFixed(2));
+    document.write("<br> Середнє арифметичне чисел у проміжку [" + A + "," + B + "): " + avg);
 
     let count = arr.filter((val, index) => index % 4 === 0 && val > 0).length;
 
-    console.log("Кількість додатних чисел на місцях, кратних 4: " + count);
+    document.write("<br> Кількість додатних чисел на місцях, кратних 4: " + count);
   </script>
 </body>
 
